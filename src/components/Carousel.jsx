@@ -1,5 +1,6 @@
 import React from "react";
-import "./picture.css"
+import "./picture.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Carousel() {
   return (
     <div
@@ -40,21 +41,21 @@ function Carousel() {
       <div className="carousel-inner">
         
         <div className="carousel-item active sliderht"   >
-          <img src="https://i.ibb.co/FzrtT6f/clm.jpg" className="d-block w-100" alt="..." />
+          <LazyLoadImage src="https://i.ibb.co/FzrtT6f/clm.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p> */}
           </div>
         </div>
         <div className="carousel-item sliderht"   >
-          <img src="https://i.ibb.co/tpr4vLv/truck.jpg" className="d-block w-100" alt="..." />
+          <LazyLoadImage src="https://i.ibb.co/tpr4vLv/truck.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p> */}
           </div>
         </div>
         <div className="carousel-item sliderht"  >
-          <img src="https://i.ibb.co/MC7Dgvr/sideview.jpg" className="d-block w-100" alt="..." />
+          <LazyLoadImage src="https://i.ibb.co/MC7Dgvr/sideview.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p> */}
@@ -62,7 +63,7 @@ function Carousel() {
         </div>
         
         <div className="carousel-item sliderht"  >
-          <img src="https://i.ibb.co/m4ysJRt/column.jpg" className="d-block w-100" alt="..." />
+          <LazyLoadImage src="https://i.ibb.co/m4ysJRt/column.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p> */}
