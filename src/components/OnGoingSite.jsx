@@ -1,17 +1,27 @@
 import React from 'react'
-import "./picture.css"
-const PicturesCard = () => {
+
+const OnGoingSite = () => {
   return (
-      <>
+    <>
       
      
     <div class="card-group container my-3">
   <div class="card px-1">
-    <img src="https://i.ibb.co/rvgsrLg/IMG-20170616-202532-scaled.jpg" class="card-img-top imageLimit rounded-3 " alt="..."/>
+  <div class="ratio ratio-16x9">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Qjjvg3hC1cY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     <div class="card-body">
       <h5 class="card-title">Ghansoli 2BHK Site</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      
+      {/* <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> */}
     </div>
   </div>
   <div class="card rounded px-1 rounded">
@@ -63,4 +73,4 @@ const PicturesCard = () => {
   )
 }
 
-export default PicturesCard
+export default OnGoingSite

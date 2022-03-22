@@ -4,6 +4,7 @@ import Video from "./components/Video";
 
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
 import PicturesCard from "./components/PicturesCard";
+import OnGoingSite from "./components/OnGoingSite";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/home' element={<Carousel/>} />
           <Route path='/Pictures' element={<PicturesCard/>} />
           <Route path='/Videos' element={<Video/>} />
+          {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
           
         </Routes >
         

@@ -6,7 +6,7 @@ function Navbar() {
   
   
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
           SAi solutions
@@ -40,6 +40,11 @@ function Navbar() {
                 Videos
               </Link>
             </li>
+            {/* <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/ongoing">
+                OnGoing Sites
+              </Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/gallery">
                 About Us
@@ -49,7 +54,7 @@ function Navbar() {
               <Link className="nav-link" aria-current="page" to="/gallery">
                 Contact Us
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item">
               <Link className="nav-link" to="#">
                 About Us

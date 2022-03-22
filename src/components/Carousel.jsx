@@ -1,13 +1,15 @@
 import React from "react";
-
+import "./picture.css"
 function Carousel() {
   return (
     <div
       id="carouselExampleDark"
       className="carousel carousel-dark slide"
-      data-bs-ride="carousel"
+      data-bs-ride="carousel" 
+      data-bs-pause= {false}
+      data-bs-interval="3000" 
     >
-      <div className="carousel-indicators">
+      <div className="carousel-indicators"  >
         <button
           type="button"
           data-bs-target="#carouselExampleDark"
@@ -37,21 +39,21 @@ function Carousel() {
       </div>
       <div className="carousel-inner">
         
-        <div className="carousel-item active" data-bs-interval="10000">
+        <div className="carousel-item active sliderht"   >
           <img src="https://i.ibb.co/FzrtT6f/clm.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p> */}
           </div>
         </div>
-        <div className="carousel-item" data-bs-interval="2000">
+        <div className="carousel-item sliderht"   >
           <img src="https://i.ibb.co/tpr4vLv/truck.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p> */}
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item sliderht"  >
           <img src="https://i.ibb.co/MC7Dgvr/sideview.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>Third slide label</h5>
@@ -59,7 +61,7 @@ function Carousel() {
           </div>
         </div>
         
-        <div className="carousel-item">
+        <div className="carousel-item sliderht"  >
           <img src="https://i.ibb.co/m4ysJRt/column.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             {/* <h5>Third slide label</h5>
