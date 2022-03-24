@@ -6,7 +6,7 @@ function Video() {
     <>
       <PopUpVideo/>
 
-      <div class="ratio ratio-16x9">
+      <div className="ratio ratio-16x9">
         <iframe
           width="560"
           height="315"
@@ -19,7 +19,7 @@ function Video() {
         
       </div>
 
-      <div class="ratio ratio-16x9">
+      <div className="ratio ratio-16x9">
         <iframe
           width="560"
           height="315"
@@ -30,7 +30,7 @@ function Video() {
           allowfullscreen
         ></iframe>
       </div>
-      <div class="ratio ratio-16x9">
+      <div className="ratio ratio-16x9">
         <iframe
           width="560"
           height="315"

@@ -5,6 +5,10 @@ import Video from "./components/Video";
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom";
 import PicturesCard from "./components/PicturesCard";
 import OnGoingSite from "./components/OnGoingSite";
+import GhansoliSlider1 from "./components/GhansoliSlider1";
+import GhansoliSlider from "./components/GhansoliSlider";
+import ThaneSlider from "./components/ThaneSlider";
+import PictureSlider from "./components/PictureSlider";
 
 
 function App() {
@@ -31,6 +35,10 @@ function App() {
           <Route path='/home' element={<Carousel/>} />
           <Route path='/Pictures' element={<PicturesCard/>} />
           <Route path='/Videos' element={<Video/>} />
+          <Route path='/ghansoli2' element={<PictureSlider/>} />
+          <Route path='/thane' element={<ThaneSlider/> } />
+          <Route path='/ghansoli4' element={<GhansoliSlider/>} />
+          <Route path='/ghansoli1' element={ <GhansoliSlider1/>} />
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
           
         </Routes >
