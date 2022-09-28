@@ -11,6 +11,9 @@ import ThaneSlider from "./components/ThaneSlider";
 import PictureSlider from "./components/PictureSlider";
 import Footer from "./components/Footer";
 import Ghansoli2 from "./components/Ghansoli2";
+import Chembur from "./components/Chembur";
+import Kalamboli from "./components/Kalamboli";
+import Kaler from "./components/Kaler";
 
 function App() {
   return (
@@ -38,6 +41,9 @@ function App() {
           <Route path="/thane" element={<ThaneSlider />} />
           <Route path="/ghansoli4" element={<GhansoliSlider />} />
           <Route path="/ghansoli1" element={<GhansoliSlider1 />} />
+          <Route path="/kalamboli" element={<Kalamboli/>} />
+          <Route path="/kaler" element={<Kaler />} />
+          <Route path="/chembur" element={<Chembur />} />
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
         </Routes>
       </Router>

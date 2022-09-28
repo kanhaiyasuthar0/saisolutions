@@ -33,13 +33,15 @@ border: 1px solid red;
   border: 1px solid grey;
   display: flex;
   /* padding: 50px; */
+  align-items: center;
+  
   width: 800px;
   margin: 50px auto;
   /* border: 1px solid red; */
 }
 .welcomeSideImage {
   height: 300px;
-  width: 300px;
+  width: 400px;
   border: 1px solid grey;
   margin: auto;
 }

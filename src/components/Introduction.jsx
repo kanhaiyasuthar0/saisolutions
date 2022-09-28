@@ -4,7 +4,7 @@ import designer from "../Assets/Icons/designer.png";
 import feedback from "../Assets/Icons/feedback.png";
 import stopwatch from "../Assets/Icons/stopwatch.png";
 import suitcase from "../Assets/Icons/suitcase.png";
-import sai from "../Assets/Icons/logo_sai.png";
+import sai from "../Assets/Icons/logo_sai_light.png";
 import styles from "../Assets/common.module.css";
 
 const Introduction = () => {
