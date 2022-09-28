@@ -10,6 +10,7 @@ import GhansoliSlider from "./components/GhansoliSlider";
 import ThaneSlider from "./components/ThaneSlider";
 import PictureSlider from "./components/PictureSlider";
 import Footer from "./components/Footer";
+import Ghansoli2 from "./components/Ghansoli2";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
           <Route path="/home" element={<Carousel />} />
           <Route path="/Pictures" element={<PicturesCard />} />
           <Route path="/Videos" element={<Video />} />
-          <Route path="/ghansoli2" element={<PictureSlider />} />
+          <Route path="/ghansoli2" element={<Ghansoli2 />} />
           <Route path="/thane" element={<ThaneSlider />} />
           <Route path="/ghansoli4" element={<GhansoliSlider />} />
           <Route path="/ghansoli1" element={<GhansoliSlider1 />} />

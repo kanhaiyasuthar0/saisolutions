@@ -1,33 +1,27 @@
 
-
 import React from 'react'
 import "./picture.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { BrowserRouter as Router, Routes , Route , Link } from "react-router-dom";
-import i1 from "../Assets/Images/Thane site/1.jpeg"
-import i2 from "../Assets/Images/Thane site/2.jpeg"
-import i3 from "../Assets/Images/Thane site/3.jpeg"
-import i4 from "../Assets/Images/Thane site/4.jpeg"
-import i5 from "../Assets/Images/Thane site/5.jpeg"
-import i6 from "../Assets/Images/Thane site/6.jpeg"
-import i7 from "../Assets/Images/Thane site/7.jpeg"
-import i8 from "../Assets/Images/Thane site/8.jpeg"
-import i9 from "../Assets/Images/Thane site/9.jpeg"
-import i10 from "../Assets/Images/Thane site/10.jpeg"
-import i11 from "../Assets/Images/Thane site/11.jpeg"
-import i12 from "../Assets/Images/Thane site/12.jpeg"
-import i13 from "../Assets/Images/Thane site/13.jpeg"
-import i14 from "../Assets/Images/Thane site/14.jpeg"
-import i15 from "../Assets/Images/Thane site/15.jpeg"
-import i16 from "../Assets/Images/Thane site/16.jpeg"
-import i17 from "../Assets/Images/Thane site/17.jpeg"
-import i18 from "../Assets/Images/Thane site/18.jpeg"
+import i1 from "../Assets/Images/Ghansoli 2bhk site2/1.jpeg"
+import i2 from "../Assets/Images/Ghansoli 2bhk site2/2.jpeg"
+import i3 from "../Assets/Images/Ghansoli 2bhk site2/3.jpeg"
+import i4 from "../Assets/Images/Ghansoli 2bhk site2/4.jpeg"
+import i5 from "../Assets/Images/Ghansoli 2bhk site2/5.jpeg"
+import i6 from "../Assets/Images/Ghansoli 2bhk site2/6.jpeg"
+import i7 from "../Assets/Images/Ghansoli 2bhk site2/7.jpeg"
+import i8 from "../Assets/Images/Ghansoli 2bhk site2/8.jpeg"
+import i9 from "../Assets/Images/Ghansoli 2bhk site2/9.jpeg"
+import i10 from "../Assets/Images/Ghansoli 2bhk site2/10.jpeg"
 
-const ThaneSlider = () => {
-     let data = [i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18]
+
+//Ghansoli 4BHK
+const Ghansoli2 = () => {
+  let data = [i1,i2,i3,i4,i5,i6,i7,i8,i9,i10]
+  
+  
+  console.log(data)
+  
   return (
-      <>
-     
     <div
     id="carouselExampleDark"
     className="carousel carousel-dark slide"
@@ -91,10 +85,7 @@ const ThaneSlider = () => {
       <span className="visually-hidden">Next</span>
     </button>
   </div>
-  </>
   )
 }
 
-export default ThaneSlider
-
-
+export default Ghansoli2

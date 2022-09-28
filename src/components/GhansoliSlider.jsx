@@ -2,47 +2,44 @@
 import React from 'react'
 import "./picture.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import i1 from "../Assets/Images/Ghansoli 4bhk/1.jpeg"
+import i2 from "../Assets/Images/Ghansoli 4bhk/2.jpeg"
+import i3 from "../Assets/Images/Ghansoli 4bhk/3.jpeg"
+import i4 from "../Assets/Images/Ghansoli 4bhk/4.jpeg"
+import i5 from "../Assets/Images/Ghansoli 4bhk/5.jpeg"
+import i6 from "../Assets/Images/Ghansoli 4bhk/6.jpeg"
+import i7 from "../Assets/Images/Ghansoli 4bhk/7.jpeg"
+import i8 from "../Assets/Images/Ghansoli 4bhk/8.jpeg"
+import i9 from "../Assets/Images/Ghansoli 4bhk/9.jpeg"
+import i10 from "../Assets/Images/Ghansoli 4bhk/10.jpeg"
+import i11 from "../Assets/Images/Ghansoli 4bhk/11.jpeg"
+import i12 from "../Assets/Images/Ghansoli 4bhk/12.jpeg"
+import i13 from "../Assets/Images/Ghansoli 4bhk/13.jpeg"
+import i14 from "../Assets/Images/Ghansoli 4bhk/14.jpeg"
+import i15 from "../Assets/Images/Ghansoli 4bhk/15.jpeg"
+import i16 from "../Assets/Images/Ghansoli 4bhk/16.jpeg"
+import i17 from "../Assets/Images/Ghansoli 4bhk/17.jpeg"
+import i18 from "../Assets/Images/Ghansoli 4bhk/18.jpeg"
+import i19 from "../Assets/Images/Ghansoli 4bhk/19.jpeg"
+import i20 from "../Assets/Images/Ghansoli 4bhk/20.jpeg"
+import i21 from "../Assets/Images/Ghansoli 4bhk/21.jpeg"
+import i22 from "../Assets/Images/Ghansoli 4bhk/22.jpeg"
+import i23 from "../Assets/Images/Ghansoli 4bhk/23.jpeg"
+import i24 from "../Assets/Images/Ghansoli 4bhk/24.jpeg"
+import i25 from "../Assets/Images/Ghansoli 4bhk/25.jpeg"
+import i26 from "../Assets/Images/Ghansoli 4bhk/26.jpeg"
+import i27 from "../Assets/Images/Ghansoli 4bhk/27.jpeg"
+import i28 from "../Assets/Images/Ghansoli 4bhk/28.jpeg"
+import i29 from "../Assets/Images/Ghansoli 4bhk/29.jpeg"
+import i30 from "../Assets/Images/Ghansoli 4bhk/30.jpeg"
+
 //Ghansoli 4BHK
 const GhansoliSlider = () => {
-    let data = [
-`https://i.ibb.co/HGY8Rkr/IMG-20190710-124945-768x1024.jpg`,
-`https://i.ibb.co/qnQ898c/IMG-20190710-124953-1-768x1024.jpg`,
-`https://i.ibb.co/qnQ898c/IMG-20190710-124953-1-768x1024.jpg`,
-`https://i.ibb.co/2Wj11Jr/IMG-20190710-125007-1-768x1024.jpg`,
-`https://i.ibb.co/2Wj11Jr/IMG-20190710-125007-1-768x1024.jpg`,
-`https://i.ibb.co/f9K4mpp/IMG-20190710-125047-1-768x1024.jpg`,
-`https://i.ibb.co/f9K4mpp/IMG-20190710-125047-1-768x1024.jpg`,
-`https://i.ibb.co/kHp1m5R/IMG-20190710-125058-1-768x1024.jpg`,
-`https://i.ibb.co/kHp1m5R/IMG-20190710-125058-1-768x1024.jpg`,
-`https://i.ibb.co/C7SYF1S/IMG-20190710-125109-1-768x1024.jpg`,
-`https://i.ibb.co/C7SYF1S/IMG-20190710-125109-1-768x1024.jpg`,
-`https://i.ibb.co/xHPzQDx/IMG-20190710-125116-768x1024.jpg`,
-`https://i.ibb.co/rZMQYsd/IMG-20190710-125148-768x1024.jpg`,
-`https://i.ibb.co/hBFQ3sb/IMG-20190710-125158-768x1024.jpg`,
-`https://i.ibb.co/8NZ9xtr/IMG-20190710-125224-768x1024.jpg`,
-`https://i.ibb.co/8PjMGxt/IMG-20190710-125232-768x1024.jpg`,
-`https://i.ibb.co/H7t2b6F/IMG-20190710-125241-768x1024.jpg`,
-`https://i.ibb.co/bbpZSSF/IMG-20190710-150812-768x1024.jpg`,
-`https://i.ibb.co/zmxKK7p/IMG-20190710-220401-768x1024.jpg`,
-`https://i.ibb.co/WVHLyXW/IMG-20190710-220409-768x1024.jpg`,
-`https://i.ibb.co/4JKVT0G/IMG-20190710-220433-768x1024.jpg`,
-`https://i.ibb.co/TTx6hqG/IMG-20190710-220457-768x1024.jpg`,
-`https://i.ibb.co/fndBgV0/IMG-20190710-220504-768x1024.jpg`,
-`https://i.ibb.co/gz3T1PS/IMG-20190710-220520-1-768x1024.jpg`,
-`https://i.ibb.co/7bWn3K6/IMG-20190710-220533-768x1024.jpg`,
-`https://i.ibb.co/LPjmtsV/IMG-20190710-220642-1-768x1024.jpg`,
-`https://i.ibb.co/LPjmtsV/IMG-20190710-220642-1-768x1024.jpg`,
-`https://i.ibb.co/20JJdPw/IMG-20190708-112732-768x1024.jpg`,
-`https://i.ibb.co/Y3vczR2/IMG-20190708-112737-768x1024.jpg`,
-`https://i.ibb.co/6ZwhqR0/IMG-20190708-112748-768x1024.jpg`,
-`https://i.ibb.co/yR3Dg3y/IMG-20190710-124749-1-768x1024.jpg`,
-`https://i.ibb.co/yR3Dg3y/IMG-20190710-124749-1-768x1024.jpg`,
-`https://i.ibb.co/93Vnjc1/IMG-20190710-124802-1-768x1024.jpg`,
-`https://i.ibb.co/pQZxJDf/IMG-20190710-124824-768x1024.jpg`,
-`https://i.ibb.co/02zhhfk/IMG-20190710-124841-768x1024.jpg`,
-`https://i.ibb.co/X7pbJsz/IMG-20190710-124852-768x1024.jpg`,
-`https://i.ibb.co/Lrq5F1d/IMG-20190710-124932-1-768x1024.jpg`,
-`https://i.ibb.co/Lrq5F1d/IMG-20190710-124932-1-768x1024.jpg` ]
+  let data = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30]
+  
+  
+  console.log(data)
+  
   return (
     <div
     id="carouselExampleDark"

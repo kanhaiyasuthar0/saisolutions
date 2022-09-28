@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "./picture.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import dingrol1 from "../Assets/Images/Dingrol/dingrol_cur1.jpeg";
-import dingrol2 from "../Assets/Images/Dingrol/dingrol_cur2.jpeg";
-import dingrol3 from "../Assets/Images/Dingrol/dingrol_cur3.jpeg";
-import dingrol4 from "../Assets/Images/Dingrol/dingrol_cur4.jpeg";
+import dingrol1 from "../Assets/Images/Dingrol/dingrol_cur1.jpg";
+import dingrol2 from "../Assets/Images/Dingrol/dingrol_cur2.jpg";
+import dingrol3 from "../Assets/Images/Dingrol/dingrol_cur3.jpg";
+import dingrol4 from "../Assets/Images/Dingrol/dingrol_cur4.jpg";
 // import loaderpic from "sai_solution_loader.gif"
 import { useState } from "react";
 import Introduction from "./Introduction";
@@ -35,7 +35,7 @@ function Carousel() {
         <div>
           <div
             id="carouselExampleDark"
-            className="carousel carousel-dark slide"
+            className="carousel carousel-dark slide mainCarousel"
             data-bs-ride="carousel"
             data-bs-pause={false}
             data-bs-interval="3000"

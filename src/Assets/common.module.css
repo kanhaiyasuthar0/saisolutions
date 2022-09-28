@@ -1,3 +1,12 @@
+.videoEachBox{
+  display: flex;
+  flex-direction: row;
+}
+.videoEachBox .video{
+/* width:70vw; */
+border: 1px solid red;
+}
+
 .loader {
 }
 .introbox {
@@ -43,13 +52,25 @@
 @media only screen and (max-width: 450px) {
   .introbox {
     flex-direction: column;
+    align-items: center;
   }
   .img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
+
   }
+  .videoEachBox{
+    flex-direction: column;
+  }
+  .videoEachBox .video{
+    width:100vw;
+
+    }
+    
+ 
   .welcomeBox {
     flex-direction: column;
+
     /* width: 100vw; */
     width: fit-content;
     margin: 0px auto;

@@ -39,6 +39,11 @@ function Navbar() {
                 Videos
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/Team">
+                Our team
+              </Link>
+            </li>
             {/* <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/ongoing">
                 OnGoing Sites
