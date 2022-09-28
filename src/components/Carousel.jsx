@@ -32,7 +32,7 @@ function Carousel() {
           <img alt="loader" src="/sai_solution_loader.svg" />
         </div>
       ) : (
-        <div style={{padding:"50px 100px"}}>
+        <div className="padder" >
           <div
             id="carouselExampleDark"
             className="carousel carousel-dark slide mainCarousel"

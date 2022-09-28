@@ -46,7 +46,9 @@ const GhansoliSlider = () => {
     className="carousel carousel-dark slide"
     data-bs-ride="carousel" 
     data-bs-pause= {false}
-    data-bs-interval="3000" 
+    data-bs-interval="3000"
+    style={{minHeight:"92vh"}}
+
   >
     <div className="carousel-indicators"  >
 

@@ -33,6 +33,7 @@ const PictureSlider = () => {
       data-bs-ride="carousel"
       data-bs-pause={false}
       data-bs-interval="3000"
+      style={{minHeight:"92vh"}}
     >
       {/* <button onClick={()=>{
             window.location.href="/Pictures"
