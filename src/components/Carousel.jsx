@@ -10,6 +10,7 @@ function Carousel() {
       data-bs-pause= {false}
       data-bs-interval="3000" 
     >
+      {/* hello */}
       <div className="carousel-indicators"  >
         <button
           type="button"
