@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import homeIcon from '../Assets/Icons/home.png'
+import sai from '../Assets/Icons/logo_sai_light.png'
 import pictureIcon from '../Assets/Icons/picture.png'
 import videoIcon from '../Assets/Icons/video.png'
 import team from '../Assets/Icons/team.png'
@@ -11,7 +12,13 @@ function Navbar() {
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
+          <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
+            <img style={{height:"30px", width:"30px"}} src={sai} alt="sailogo" />
+          <span>
+
           SAi solutions
+          </span>
+          </div>
         </Link>
 
         <button
