@@ -65,6 +65,17 @@ let data1 = [
           allowfullscreen
           ></iframe>
       </div>
+      <div className="ratio ratio-16x9">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/EKvKmNYF7xU" 
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          ></iframe>
+      </div>
           </div>
     </>
   );

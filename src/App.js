@@ -14,6 +14,8 @@ import Ghansoli2 from "./components/Ghansoli2";
 import Chembur from "./components/Chembur";
 import Kalamboli from "./components/Kalamboli";
 import Kaler from "./components/Kaler";
+import Site1 from "./components/Site1";
+import Team from "./components/Team";
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           <Route path="/home" element={<Carousel />} />
           <Route path="/Pictures" element={<PicturesCard />} />
           <Route path="/Videos" element={<Video />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/ghansoli2" element={<Ghansoli2 />} />
           <Route path="/thane" element={<ThaneSlider />} />
           <Route path="/ghansoli4" element={<GhansoliSlider />} />
@@ -44,6 +47,7 @@ function App() {
           <Route path="/kalamboli" element={<Kalamboli/>} />
           <Route path="/kaler" element={<Kaler />} />
           <Route path="/chembur" element={<Chembur />} />
+          <Route path="/site1jweller" element={<Site1 />} />
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
         </Routes>
       </Router>

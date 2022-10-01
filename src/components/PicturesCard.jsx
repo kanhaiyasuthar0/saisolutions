@@ -10,6 +10,7 @@ import Ghansoli2 from './Ghansoli2';
 import chembur from "../Assets/Images/chembur jweller/1.jpeg"
 import kalamboli from "../Assets/Images/kalamboli 3bhk/1.jpeg"
 import kaler from "../Assets/Images/kaler bungalow/4.jpeg"
+import mahendra from "../Assets/Images/sites1/1.jpeg"
 const PicturesCard = () => {
   return (
       <>
@@ -32,7 +33,7 @@ const PicturesCard = () => {
   <div className="card px-1"> 
   <Link to="/ghansoli1"><LazyLoadImage src="https://i.ibb.co/rvgsrLg/IMG-20170616-202532-scaled.jpg" className="card-img-top imageLimit rounded-3 " alt="..."/></Link> 
     <div className="card-body">
-      <h5 className="card-title">  <Link to="/ghansoli1"> Ghansoli 2BHK Site </Link> </h5>
+      <h5 className="card-title">  Ghansoli 2BHK Site </h5>
       <p className="card-text">The construction of a two-bedroom home on a plot close to the Ghansoli railway station dealt with excellent aesthetics and strong material selection.</p>
       <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
     </div> 
@@ -83,6 +84,14 @@ const PicturesCard = () => {
   <Link to="/kalamboli">  <LazyLoadImage src={kalamboli} className="card-img-top imageLimit" alt="..."/></Link> 
     <div className="card-body">
       <h5 className="card-title">Kalamboli</h5>
+      <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div className="card px-1">
+  <Link to="/site1jweller">  <LazyLoadImage src={mahendra} className="card-img-top imageLimit" alt="..."/></Link> 
+    <div className="card-body">
+      <h5 className="card-title">Mahendra Jwellers Ghansoli</h5>
       <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
     </div>

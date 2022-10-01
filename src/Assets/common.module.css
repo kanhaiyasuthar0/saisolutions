@@ -44,6 +44,15 @@ border: 1px solid red;
   width: 400px;
   border: 1px solid grey;
   margin: auto;
+  transition: all 3s;
+
+}
+.welcomeSideImage:hover {
+  height: 310px;
+  width: 405px;
+  border: none;
+  margin: auto;
+  box-shadow:3px 1px 1px 1px;
 }
 .welcomeNote {
   padding: 0px 25px;

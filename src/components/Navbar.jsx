@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import homeIcon from '../Assets/Icons/home.png'
+import pictureIcon from '../Assets/Icons/picture.png'
+import videoIcon from '../Assets/Icons/video.png'
+import team from '../Assets/Icons/team.png'
 function Navbar() {
   const [active, setActive] = useState();
   return (
@@ -26,22 +29,28 @@ function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/home">
-                Home
+                 <div style={{marginRight:"20px"}}> <span>Home</span>  <img style={{height:"30px", width:"30px"}} src={homeIcon} alt="home" /> </div>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/Pictures">
-                Pictures
+              <div style={{marginRight:"20px"}}> <span>Pictures</span>  <img style={{height:"30px", width:"30px"}} src={pictureIcon} alt="picture" /> </div>
+
+                
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/Videos">
-                Videos
+              <div style={{marginRight:"20px"}}> <span>Videos</span>  <img style={{height:"30px", width:"30px"}} src={videoIcon} alt="picture" /> </div>
+
+                
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/Team">
-                Our team
+              <div style={{marginRight:"20px"}}> <span>Our team</span>  <img style={{height:"30px", width:"30px"}} src={team} alt="picture" /> </div>
+
+                
               </Link>
             </li>
             {/* <li className="nav-item">

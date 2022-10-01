@@ -5,16 +5,22 @@ import dingrol1 from "../Assets/Images/Dingrol/dingrol_cur1.jpg";
 import dingrol2 from "../Assets/Images/Dingrol/dingrol_cur2.jpg";
 import dingrol3 from "../Assets/Images/Dingrol/dingrol_cur3.jpg";
 import dingrol4 from "../Assets/Images/Dingrol/dingrol_cur4.jpg";
+import i1 from "../Assets/Images/sites1/1.jpeg"
+import i2 from "../Assets/Images/sites1/2.jpeg"
+import i3 from "../Assets/Images/sites1/3.jpeg"
+import i4 from "../Assets/Images/sites1/4.jpeg"
+import i5 from "../Assets/Images/sites1/5.jpeg"
+import i6 from "../Assets/Images/sites1/6.jpeg"
 // import loaderpic from "sai_solution_loader.gif"
 import { useState } from "react";
 import Introduction from "./Introduction";
 function Carousel() {
-  let imgarr = [dingrol1, dingrol2, dingrol3, dingrol4];
+  let imgarr = [i1,i2,i3,i4,dingrol1, dingrol2, dingrol3, dingrol4];
   const [loader, setLoader] = useState(true);
   useEffect(() => {
     let id = setTimeout(() => {
       setLoader(false);
-    }, 2000);
+    }, 1000);
     // return clearTimeout(id)
   }, []);
   return (
@@ -67,17 +73,119 @@ function Carousel() {
                 data-bs-slide-to="3"
                 aria-label="Slide 4"
               ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="5"
+                aria-label="Slide 6"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="6"
+                aria-label="Slide 7"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="7"
+                aria-label="Slide 8"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="8"
+                aria-label="Slide 9"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="9"
+                aria-label="Slide 10"
+              ></button>
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active sliderht">
+                <LazyLoadImage
+                  src={i1}
+                  className="d-block h-100 cover"
+                  alt="..."
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  {/* <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p> */}
+                </div>
+              </div>
+              <div className="carousel-item sliderht">
+                <LazyLoadImage
+                  src={i2}
+                  className="d-block h-100 cover"
+                  alt="..."
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  {/* <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> */}
+                </div>
+              </div>
+              <div className="carousel-item sliderht">
+                <LazyLoadImage
+                  src={i3}
+                  className="d-block h-100 cover"
+                  alt="..."
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  {/* <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> */}
+                </div>
+              </div>
+              <div className="carousel-item sliderht">
+                <LazyLoadImage
+                  src={i4}
+                  className="d-block h-100 cover"
+                  alt="..."
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  {/* <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> */}
+                </div>
+              </div>
+              <div className="carousel-item sliderht">
+                <LazyLoadImage
+                  src={i5}
+                  className="d-block h-100 cover"
+                  alt="..."
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  {/* <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> */}
+                </div>
+              </div>
+              <div className="carousel-item sliderht">
+                <LazyLoadImage
+                  src={i6}
+                  className="d-block h-100 cover"
+                  alt="..."
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  {/* <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> */}
+                </div>
+              </div>
+              <div className="carousel-item sliderht">
                 <LazyLoadImage
                   src={dingrol1}
                   className="d-block w-100"
                   alt="..."
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  {/* <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p> */}
+                  {/* <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p> */}
                 </div>
               </div>
               <div className="carousel-item sliderht">
