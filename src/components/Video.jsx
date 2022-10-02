@@ -19,7 +19,7 @@ let data1 = [
   return (
     <>
       {/* <PopUpVideo/> */}
-      <div >
+      <div className={styles.videoEachBox}>
 
       <div className = "ratio ratio-16x9">
         <iframe
@@ -28,7 +28,7 @@ let data1 = [
           src="https://www.youtube.com/embed/kQURbofO1i0"
           title="YouTube video player"
           frameborder="0"
-          allow="ac autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
       </div>
@@ -65,7 +65,12 @@ let data1 = [
           allowfullscreen
           ></iframe>
       </div>
-      <div className="ratio ratio-16x9">
+     
+          </div>
+
+          <div className={styles.videoEachBox}>
+
+          <div className="ratio ratio-16x9">
         <iframe
           width="560"
           height="315"
@@ -76,7 +81,7 @@ let data1 = [
           allowfullscreen
           ></iframe>
       </div>
-          </div>
+      </div>
     </>
   );
 }

@@ -18,7 +18,7 @@ code {
 @media only screen and (max-width: 450px) {
   
   body{
-    background-image: url("../src/Assets/Images/screens/mobile.png");
+    background-image: url("../src/Assets/Images/screens/mobilebig.svg");
     background-repeat: no-repeat;
 
   }

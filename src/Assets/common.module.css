@@ -59,7 +59,16 @@ border: 1px solid red;
   width: 500px;
   max-width: 500px;
 }
+.videoEachBox{
+  height: 500px;
+  width: 600px;
+  margin:20px;
+}
+.videoEachBox:nth-child(even){
+  /* border: 1px solid red; */
+  margin: 20px auto;
 
+}
 @media only screen and (max-width: 450px) {
   .introbox {
     flex-direction: column;
@@ -72,6 +81,9 @@ border: 1px solid red;
   }
   .videoEachBox{
     flex-direction: column;
+    height: 400px;
+    width: 400px;
+    margin: auto;
   }
   .videoEachBox .video{
     width:100vw;
@@ -95,5 +107,8 @@ border: 1px solid red;
     width: 300px;
     padding: 0px;
     max-width: 300px;
+    background-blend-mode: color-burn;
+    background: rgb(255,255,255,0.5);
+    border:1px solid rgb(255,255,255,0.5)
   }
 }
