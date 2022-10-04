@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
     /* background-image: url("../src/Assets/Images/screens/desktop4.svg");
     background-repeat: no-repeat; */
+
+
 }
 
 code {
@@ -15,7 +17,6 @@ code {
 }
 .navbar{
   transition: all 0.4s !important;
-
 }
 .normal div{
   color: black !important;
@@ -24,6 +25,15 @@ code {
 
 
 }
+
+.lightIcon{
+  background-color: none  !important;
+}
+.darkIcon{
+  background-color: white !important;
+
+}
+
 .dark div{
   color: white !important;
   border:0.5px solid black !important;
@@ -57,4 +67,10 @@ code {
     background-repeat: no-repeat;
 
   } */
+  .lightIcon{
+    display: none;
+  }
+  .darkIcon{
+    display: none;
+  }
 }

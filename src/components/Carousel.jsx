@@ -14,10 +14,10 @@ import i6 from "../Assets/Images/sites1/6.jpeg"
 // import loaderpic from "sai_solution_loader.gif"
 import { useState } from "react";
 import Introduction from "./Introduction";
-function Carousel() {
+function Carousel(props) {
   let imgarr = [i1,i2,i3,i4,dingrol1, dingrol2, dingrol3, dingrol4];
   const [loader, setLoader] = useState(true);
-  
+  console.log(props)
   useEffect(() => {
     let id = setTimeout(() => {
       setLoader(false);
@@ -39,7 +39,7 @@ function Carousel() {
           <img alt="loader" src="/sai_solution_loader.svg" />
         </div>
       ) : (
-        <div className="padder" >
+        <div className={`padder ${props.theme ? "lightdiv" : "darkdiv"}`} >
           <div  style={{height:"500px", maxWidth:"500px",display:"flex", flexDirection:"column", justifyContent:"center",marginBottom:"300px"}}>
           <div
             id="carouselExampleDark"
@@ -225,7 +225,7 @@ function Carousel() {
               </div>
             </div>
             <button
-              className="carousel-control-prev"
+             className={`carousel-control-prev ${props.theme ? "lightIcon" : "darkIcon"}`}
               type="button"
               data-bs-target="#carouselExampleDark"
               data-bs-slide="prev"
@@ -237,7 +237,7 @@ function Carousel() {
               <span className="visually-hidden">Previous</span>
             </button>
             <button
-              className="carousel-control-next"
+              className={`carousel-control-next ${props.theme ? "lightIcon" : "darkIcon"}`}
               type="button"
               data-bs-target="#carouselExampleDark"
               data-bs-slide="next"

@@ -38,9 +38,9 @@ function App() {
           {/* {console.log("gall")} */}
           {/* </Route> */}
 
-          <Route path="/" element={<Carousel />} />
-          <Route path="/home" element={<Carousel />} />
-          <Route path="/Pictures" element={<PicturesCard />} />
+          <Route  path="/" element={<Carousel theme={theme} setTheme={setTheme}/>} />
+          <Route path="/home" element={<Carousel theme={theme} setTheme={setTheme} />} />
+          <Route path="/Pictures" element={<PicturesCard theme={theme} setTheme={setTheme}/>} />
           <Route path="/Videos" element={<Video />} />
           <Route path="/team" element={<Team />} />
           <Route path="/ghansoli2" element={<Ghansoli2 />} />

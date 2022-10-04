@@ -11,9 +11,9 @@ import chembur from "../Assets/Images/chembur jweller/1.jpeg"
 import kalamboli from "../Assets/Images/kalamboli 3bhk/1.jpeg"
 import kaler from "../Assets/Images/kaler bungalow/4.jpeg"
 import mahendra from "../Assets/Images/sites1/1.jpeg"
-const PicturesCard = () => {
+const PicturesCard = (props) => {
   return (
-      <div className='pictureDiv'>
+      <div className={`${props.theme ? 'pictureDiv' : "darkDiv"}`}>
      
     <PictureSlider/>  
     {/* <ThaneSlider/> */}
