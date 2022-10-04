@@ -13,7 +13,7 @@ import kaler from "../Assets/Images/kaler bungalow/4.jpeg"
 import mahendra from "../Assets/Images/sites1/1.jpeg"
 const PicturesCard = () => {
   return (
-      <>
+      <div className='pictureDiv'>
      
     <PictureSlider/>  
     {/* <ThaneSlider/> */}
@@ -100,7 +100,7 @@ const PicturesCard = () => {
 
 
      
-</>
+</div>
   )
 }
 

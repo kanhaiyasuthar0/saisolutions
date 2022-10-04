@@ -1,30 +1,31 @@
 import React from "react";
-
-const Footer = () => {
+// import footerImg from
+const Footer = (props) => {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div >
+      <nav style={{background: props.theme ? "#EF5557" : "black", color:props.theme ? "black" : "white"}} class="navbar navbar-expand-lg">
+      
         <a class="navbar-brand" href="#"></a>
         
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
+              <a className={`nav-link ${props.theme ? "normal" : "dark"}`}  href="#">
+              <div>Home  <span class="sr-only">(current)</span></div>  
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                About us
+              <a className={`nav-link ${props.theme ? "normal" : "dark"}`}  href="#">
+               <div> About us</div>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Contact us
+              <a className={`nav-link ${props.theme ? "normal" : "dark"}`}  href="#">
+               <div>Contact us</div> 
               </a>
             </li>
           </ul>
-          <span class="navbar-text">Proud Indian</span>
+          <span className={`nav-link ${props.theme ? "normal" : "dark"}`} class="navbar-text"><div> Proud Indian</div></span>
         </div>
       </nav>
       <div>

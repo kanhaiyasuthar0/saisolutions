@@ -17,6 +17,7 @@ import Introduction from "./Introduction";
 function Carousel() {
   let imgarr = [i1,i2,i3,i4,dingrol1, dingrol2, dingrol3, dingrol4];
   const [loader, setLoader] = useState(true);
+  
   useEffect(() => {
     let id = setTimeout(() => {
       setLoader(false);
@@ -24,7 +25,7 @@ function Carousel() {
     // return clearTimeout(id)
   }, []);
   return (
-    <>
+    <div>
       {loader ? (
         <div
           style={{
@@ -39,6 +40,7 @@ function Carousel() {
         </div>
       ) : (
         <div className="padder" >
+          <div  style={{height:"500px", maxWidth:"500px",display:"flex", flexDirection:"column", justifyContent:"center",marginBottom:"300px"}}>
           <div
             id="carouselExampleDark"
             className="carousel carousel-dark slide mainCarousel"
@@ -247,10 +249,12 @@ function Carousel() {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
+          </div>
           <Introduction />
+
         </div>
       )}
-    </>
+    </div>
   );
 }
 

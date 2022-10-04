@@ -62,11 +62,14 @@ border: 1px solid red;
 .videoEachBox{
   height: 500px;
   width: 600px;
-  margin:20px;
+  margin:20px auto;
+
 }
 .videoEachBox:nth-child(even){
   /* border: 1px solid red; */
-  margin: 20px auto;
+
+  /* margin: 20px auto; */
+
 
 }
 @media only screen and (max-width: 450px) {

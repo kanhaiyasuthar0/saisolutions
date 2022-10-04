@@ -16,12 +16,15 @@ import Kalamboli from "./components/Kalamboli";
 import Kaler from "./components/Kaler";
 import Site1 from "./components/Site1";
 import Team from "./components/Team";
+import { useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState(true)
+  
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar theme={theme} setTheme={setTheme} />
         {/* <Counter/> */}
 
         <Routes>
@@ -51,7 +54,7 @@ function App() {
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
         </Routes>
       </Router>
-      <Footer />
+      <Footer  theme={theme} setTheme={setTheme}/>
     </>
   );
 }

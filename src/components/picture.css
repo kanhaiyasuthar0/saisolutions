@@ -5,10 +5,10 @@
     
 }
 .sliderht{
-    max-height: 92.5vh;
+    /* max-height: 92.5vh; */
     /* margin-top: vh; */
     /* padding: 25px 0px; */
-
+max-width: 100%;
 
 }
 
@@ -16,28 +16,41 @@
     object-fit: cover;
     margin: auto;
     padding: 20px;
-    max-height: 100vh;
+    max-height: 500px;
     /* width: 50px;
     
     height: 100px; */
   }
 
   .padder{
-    padding: 50px 100px;
+    padding: 10px;
+      background-image: url("../../src/Assets/Images/screens/desktop4.svg");
+    background-repeat: no-repeat;
 
   }
-  
+  .navbar{
+    color: black !important;
+  }
+  .pictureDiv{
+    /* border: 10px solid green !important; */
+    /* background-position:center; */
+    background-image: url("../../src/Assets/Images/screens/desktop5.svg");
+    background-repeat: no-repeat;
+
+  }
   
   @media only screen and (max-width: 450px) {
       
       .padder{
         padding: 10px 10px;
+        background-image: url("../../src/Assets/Images/screens/mobilebig.svg");
+        background-repeat: no-repeat;
     
       }
       .cover{
         object-fit: cover;
         margin: auto;
-        width: 100%;
+
 
       }
 
