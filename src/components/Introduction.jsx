@@ -15,7 +15,7 @@ const Introduction = () => {
           margin: "0px auto",
           textAlign: "center",
           fontSize: "20px",
-          color: "grey",
+          color: "black",
         }}
       >
         Why SAi solution ?
@@ -49,17 +49,17 @@ const Introduction = () => {
           <div>
             <img className={styles.img} src={suitcase} alt="" />
           </div>
-          <div>Great market review and feedback</div>
+          <div>Great mark<span style={{ color: "black" }}>et review and feedback</span> </div>
         </div>
       </div>
       <div className={styles.welcomeBox}>
-        <div className={styles.welcomeSideImage}>
+        {/* <div className={styles.welcomeSideImage}>
           <img
             style={{ height: "100%", width: "100%" }}
             src={sai}
             alt="SAi solution"
           />
-        </div>
+        </div> */}
 
         <div className={styles.welcomeNote}>
           Greetings from SAi Solutions. Together, we accomplish so much more

@@ -16,15 +16,22 @@ import Kalamboli from "./components/Kalamboli";
 import Kaler from "./components/Kaler";
 import Site1 from "./components/Site1";
 import Team from "./components/Team";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Section from "./components/Section";
 
 function App() {
   const [theme, setTheme] = useState(true)
-  
+  // window.scrollBy(100,1000)
+  // window.onscroll()
+
+  // useEffect(()=>{
+  // console.log(window.scrollBy(100,100))
+
+  // },[window.screenY])
   return (
     <>
       <Router>
-        <Navbar theme={theme} setTheme={setTheme} />
+        {/* <Navbar theme={theme} setTheme={setTheme} /> */}
         {/* <Counter/> */}
 
         <Routes>
@@ -38,23 +45,24 @@ function App() {
           {/* {console.log("gall")} */}
           {/* </Route> */}
 
-          <Route  path="/" element={<Carousel theme={theme} setTheme={setTheme}/>} />
-          <Route path="/home" element={<Carousel theme={theme} setTheme={setTheme} />} />
-          <Route path="/Pictures" element={<PicturesCard theme={theme} setTheme={setTheme}/>} />
+          <Route path="/" element={<Section theme={theme} setTheme={setTheme} />} />
+          {/* <Route path="/home" element={<Carousel theme={theme} setTheme={setTheme} />} /> */}
+          <Route path="/home" element={<Section theme={theme} setTheme={setTheme} />} />
+          <Route path="/Pictures" element={<PicturesCard theme={theme} setTheme={setTheme} />} />
           <Route path="/Videos" element={<Video />} />
           <Route path="/team" element={<Team />} />
           <Route path="/ghansoli2" element={<Ghansoli2 />} />
           <Route path="/thane" element={<ThaneSlider />} />
           <Route path="/ghansoli4" element={<GhansoliSlider />} />
           <Route path="/ghansoli1" element={<GhansoliSlider1 />} />
-          <Route path="/kalamboli" element={<Kalamboli/>} />
+          <Route path="/kalamboli" element={<Kalamboli />} />
           <Route path="/kaler" element={<Kaler />} />
           <Route path="/chembur" element={<Chembur />} />
           <Route path="/site1jweller" element={<Site1 />} />
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
         </Routes>
       </Router>
-      <Footer  theme={theme} setTheme={setTheme}/>
+      {/* <Footer  theme={theme} setTheme={setTheme}/> */}
     </>
   );
 }

@@ -17,8 +17,11 @@ import Introduction from "./Introduction";
 function Carousel(props) {
   let imgarr = [i1,i2,i3,i4,dingrol1, dingrol2, dingrol3, dingrol4];
   const [loader, setLoader] = useState(true);
-  console.log(props)
+  const [screenY, setScreenY] = useState(0)
+  // console.log(props)
+  // console.log(screenY)
   useEffect(() => {
+  (window.addEventListener('scroll', ()=>{  setScreenY(window.scrollY)}))
     let id = setTimeout(() => {
       setLoader(false);
     }, 1000);

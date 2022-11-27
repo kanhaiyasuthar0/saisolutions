@@ -31,7 +31,7 @@ const Chembur = () => {
     data-bs-ride="carousel" 
     data-bs-pause= {false}
     data-bs-interval="3000"
-    style={{minHeight:"92vh"}}
+    style={{minHeight:"92vh", maxHeight:"100vh", boxSizing:"border-box", maxWidth:"400px"}}
 
   >
     <div className="carousel-indicators"  >

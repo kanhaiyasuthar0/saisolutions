@@ -1,0 +1,101 @@
+.container1 {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    /* background-image: url("../Assets/Images/screens/mobile_big.svg"); */
+    box-sizing: border-box;
+}
+
+section {
+    box-sizing: border-box;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* border: 1px solid green; */
+}
+
+.one {
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw; */
+    background-image: url(../Assets/Images/Dingrol/dingrol_cur1.jpeg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    padding: 10px;
+
+}
+
+.three {
+    background-image: url(../Assets/Images/screens/section_intro.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.videoEachBoxMainDiv {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.videoEachBox {
+    /* flex-direction: column; */
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    display: none;
+}
+
+.videoEachBox .video {
+    /* width:100vw; */
+
+}
+
+@media screen and (max-width:500px) {
+    .one {
+        background-image: url("../Assets/Images/screens/chair.jpg");
+        background-position: center;
+    }
+
+    .two {
+        background-image: url("../Assets/Images/screens/table.jpg");
+
+    }
+
+    .three {
+        background-image: url("../Assets/Images/screens/lamp.jpg");
+        background-position: top;
+    }
+
+    .btngrp {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 25px;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .eachbtn {
+        width: 150px;
+        border: 0.5px solid white;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: rgba(208, 221, 220, 0.077);
+        box-shadow: 2px 5px 10px grey;
+    }
+
+    .headline {
+        font-size: 36px;
+        text-align: center;
+        font-weight: 700;
+    }
+}

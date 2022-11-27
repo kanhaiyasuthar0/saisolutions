@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    /* background-image: url("../src/Assets/Images/screens/desktop4.svg");
+  /* background-image: url("../src/Assets/Images/screens/desktop4.svg");
     background-repeat: no-repeat; */
 
 
@@ -13,64 +13,80 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+    monospace;
 }
-.navbar{
+
+.navbar {
   transition: all 0.4s !important;
+  /* background-color: rgba(128, 128, 128, 0.201); */
 }
-.normal div{
+
+.normal div {
   color: black !important;
-  border:0.5px solid #EF5557 !important;
+  /* border:0.5px solid #EF5557 !important; */
+  transition: all 0.4s;
+
+}
+
+.lightIcon {
+  background-color: none !important;
+}
+
+.darkIcon {
+  background-color: white !important;
+
+}
+
+.dark div {
+  color: white !important;
+  /* border: 0.5px solid black !important; */
   transition: all 0.4s;
 
 
 }
 
-.lightIcon{
-  background-color: none  !important;
-}
-.darkIcon{
-  background-color: white !important;
-
-}
-
-.dark div{
-  color: white !important;
-  border:0.5px solid black !important;
-  transition: all 0.4s;
-
-
-}
-.MuiSwitch-thumb{
+.MuiSwitch-thumb {
   color: white !important;
 }
-.MuiSwitch-track{
+
+.MuiSwitch-track {
   background-color: white !important;
 }
-.normal:hover div{
+
+.normal:hover div {
   /* color: black !important; */
-  border:0.5px solid white !important;
+  /* border:0.5px solid black !important; */
+  background-color: rgba(128, 128, 128, 0.231);
   border-radius: 10px !important;
-  color: white !important;
+  color: black !important;
 
 
 }
-.dark:hover div{
-  border:0.5px solid white !important;
+
+.dark:hover div {
+  /* border:0.5px solid black !important; */
+  background-color: rgba(128, 128, 128, 0.231);
+  color: black;
   border-radius: 10px !important;
 }
+
+.navbar-dark .navbar-toggler-icon {
+  /* background-image:; */
+}
+
 
 @media only screen and (max-width: 450px) {
-  
+
   /* body{
     background-image: url("../src/Assets/Images/screens/mobilebig.svg");
     background-repeat: no-repeat;
 
   } */
-  .lightIcon{
+  .lightIcon {
     display: none;
   }
-  .darkIcon{
+
+  .darkIcon {
     display: none;
   }
 }

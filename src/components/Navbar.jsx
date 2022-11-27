@@ -7,18 +7,26 @@ import pictureIcon from '../Assets/Icons/picture.png'
 import videoIcon from '../Assets/Icons/video.png'
 import team from '../Assets/Icons/team.png'
 import { Switch } from "@mui/material";
+import { useEffect } from "react";
 function Navbar(props) {
   const [active, setActive] = useState();
+  const [screenY, setScreenY] = useState(0)
+  console.log(screenY)
+  useEffect(() => {
+
+    (window.addEventListener('scroll', () => { setScreenY(window.scrollY) }))
+  }, [])
+
   return (
-    <nav style={{background: props.theme ? "#EF5557" : "black", color:props.theme ? "black" : "white"}} className="navbar sticky-top navbar-expand-lg navbar-dark">
+    <nav style={{ background: props.theme ? "none" : "none", color: props.theme ? "white" : "black", width: "100vw" }} className={`navbar sticky-top navbar-expand-lg navbar-dark ${screenY > 100 ? "removebg" : ""}`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
-          <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-            <img style={{height:"30px", width:"30px"}} src={sai} alt="sailogo" />
-          <span>
+          <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly" }}>
+            <img style={{ height: "30px", width: "30px", marginRight: "10px" }} src={sai} alt="sailogo" />
+            <span>
 
-          SAi solutions
-          </span>
+              SAi solutions
+            </span>
           </div>
         </Link>
 
@@ -37,28 +45,28 @@ function Navbar(props) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className={`nav-link ${props.theme ? "normal" : "dark"}`} aria-current="page" to="/home">
-                 <div style={{marginRight:"20px", padding:"10px 20px"}}> <span>Home</span>  <img style={{height:"30px", width:"30px"}} src={homeIcon} alt="home" /> </div>
+                <div style={{ marginRight: "20px", padding: "10px 20px" }}> <span>Home</span>  <img style={{ height: "30px", width: "30px" }} src={homeIcon} alt="home" /> </div>
               </Link>
             </li>
             <li className={`nav-item`}>
               <Link className={`nav-link ${props.theme ? "normal" : "dark"}`} aria-current="page" to="/Pictures">
-              <div style={{marginRight:"20px", padding:"10px 20px"}}> <span>Pictures</span>  <img style={{height:"30px", width:"30px"}} src={pictureIcon} alt="picture" /> </div>
+                <div style={{ marginRight: "20px", padding: "10px 20px" }}> <span>Pictures</span>  <img style={{ height: "30px", width: "30px" }} src={pictureIcon} alt="picture" /> </div>
 
-                
+
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${props.theme ? "normal" : "dark"}`}  aria-current="page" to="/Videos">
-              <div style={{marginRight:"20px", padding:"10px 20px"}}> <span>Videos</span>  <img style={{height:"30px", width:"30px"}} src={videoIcon} alt="picture" /> </div>
+              <Link className={`nav-link ${props.theme ? "normal" : "dark"}`} aria-current="page" to="/Videos">
+                <div style={{ marginRight: "20px", padding: "10px 20px" }}> <span>Videos</span>  <img style={{ height: "30px", width: "30px" }} src={videoIcon} alt="picture" /> </div>
 
-                
+
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${props.theme ? "normal" : "dark"}`}  aria-current="page" to="/Team">
-              <div style={{marginRight:"20px", padding:"10px 20px"}}> <span>Our team</span>  <img style={{height:"30px", width:"30px"}} src={team} alt="picture" /> </div>
+              <Link className={`nav-link ${props.theme ? "normal" : "dark"}`} aria-current="page" to="/Team">
+                <div style={{ marginRight: "20px", padding: "10px 20px" }}> <span>Our team</span>  <img style={{ height: "30px", width: "30px" }} src={team} alt="picture" /> </div>
 
-                
+
               </Link>
             </li>
             {/* <li className="nav-item">
@@ -81,12 +89,12 @@ function Navbar(props) {
                 About Us
               </Link>
             </li> */}
-         
+
           </ul>
-            <Switch onClick={()=>props.setTheme(!props.theme)} defaultChecked color="secondary" />
+          <Switch onClick={() => props.setTheme(!props.theme)} defaultChecked color="secondary" />
         </div>
-      </div>
-    </nav>
+      </div >
+    </nav >
   );
 }
 

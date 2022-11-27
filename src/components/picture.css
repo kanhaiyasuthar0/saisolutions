@@ -15,7 +15,7 @@ max-width: 100%;
 .cover {
     object-fit: cover;
     margin: auto;
-    padding: 20px;
+    /* padding: 20px; */
     max-height: 500px;
     /* width: 50px;
     
@@ -61,7 +61,21 @@ max-width: 100%;
     background-repeat: no-repeat;
 
   }
-  
+  .removebg{
+    background-image: none !important;
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    /* color: black; */
+    /* border: 10px solid green; */
+  }
+  .removebg .normal div{
+    border: none !important;
+    
+  }
+  .removebg .normal div:hover{
+    color: black !important;
+    border: 0.5px solid black !important;
+    
+  }
   @media only screen and (max-width: 450px) {
       
       .padder{

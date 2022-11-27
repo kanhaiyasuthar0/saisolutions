@@ -1,23 +1,25 @@
-.videoEachBox{
+.videoEachBox {
   display: flex;
   flex-direction: row;
 }
-.videoEachBox .video{
-/* width:70vw; */
-border: 1px solid red;
+
+.videoEachBox .video {
+  /* width:70vw; */
+  border: 1px solid red;
 }
 
-.loader {
-}
+.loader {}
+
 .introbox {
   text-align: center;
   display: flex;
   word-wrap: break-word;
   margin: 0px auto;
-  /* width: fit-content; */
+  width: 100vw;
   /* border: 1px solid red; */
   justify-content: space-evenly;
 }
+
 .each {
   display: flex;
   flex-direction: column;
@@ -25,20 +27,23 @@ border: 1px solid red;
   /* border: 1px solid red; */
   margin: 10px 15px;
 }
+
 .img {
   height: 100px;
   width: 100px;
 }
+
 .welcomeBox {
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   display: flex;
   /* padding: 50px; */
   align-items: center;
-  
+
   width: 800px;
   margin: 50px auto;
   /* border: 1px solid red; */
 }
+
 .welcomeSideImage {
   height: 300px;
   width: 400px;
@@ -47,53 +52,65 @@ border: 1px solid red;
   transition: all 3s;
 
 }
+
 .welcomeSideImage:hover {
   height: 310px;
   width: 405px;
   border: none;
   margin: auto;
-  box-shadow:3px 1px 1px 1px;
+  box-shadow: 3px 1px 1px 1px;
 }
+
 .welcomeNote {
   padding: 0px 25px;
   width: 500px;
   max-width: 500px;
+  font-size: 16px;
+  /* background-color: transparent; */
+  /* border: 1px solid red; */
+  background-color: transparent !important;
 }
-.videoEachBox{
+
+.videoEachBox {
   height: 500px;
   width: 600px;
-  margin:20px auto;
+  margin: 20px auto;
 
 }
-.videoEachBox:nth-child(even){
+
+.videoEachBox:nth-child(even) {
   /* border: 1px solid red; */
 
   /* margin: 20px auto; */
 
 
 }
+
 @media only screen and (max-width: 450px) {
   .introbox {
     flex-direction: column;
     align-items: center;
   }
+
   .img {
     height: 50px;
     width: 50px;
 
   }
-  .videoEachBox{
+
+  .videoEachBox {
     flex-direction: column;
     height: 400px;
     width: 400px;
     margin: auto;
   }
-  .videoEachBox .video{
-    width:100vw;
 
-    }
-    
- 
+  .videoEachBox .video {
+    width: 100vw;
+
+  }
+
+
   .welcomeBox {
     flex-direction: column;
 
@@ -102,16 +119,18 @@ border: 1px solid red;
     margin: 0px auto;
     border: none;
   }
+
   .welcomeSideImage {
     height: 250px;
     width: 250px;
   }
+
   .welcomeNote {
     width: 300px;
     padding: 0px;
     max-width: 300px;
     background-blend-mode: color-burn;
-    background: rgb(255,255,255,0.5);
-    border:1px solid rgb(255,255,255,0.5)
+    background: rgb(255, 255, 255, 0.5);
+    /* border:1px solid rgb(255,255,255,0.5) */
   }
 }
