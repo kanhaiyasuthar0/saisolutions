@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
 import Section from "./components/Section";
 
 function App() {
-  const [theme, setTheme] = useState(true)
+  const [theme, setTheme] = useState(false)
   // window.scrollBy(100,1000)
   // window.onscroll()
 
