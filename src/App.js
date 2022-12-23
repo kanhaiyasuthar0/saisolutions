@@ -18,6 +18,8 @@ import Site1 from "./components/Site1";
 import Team from "./components/Team";
 import { useEffect, useState } from "react";
 import Section from "./components/Section";
+import Admin from "./components/Admin";
+import AdminPanel from "./components/AdminPanel";
 
 function App() {
   const [theme, setTheme] = useState(false)
@@ -46,6 +48,8 @@ function App() {
           {/* </Route> */}
 
           <Route path="/" element={<Section theme={theme} setTheme={setTheme} />} />
+          <Route path="/admin" element={<Admin theme={theme} setTheme={setTheme} />} />
+          <Route path="/adminpanel" element={<AdminPanel theme={theme} setTheme={setTheme} />} />
           {/* <Route path="/home" element={<Carousel theme={theme} setTheme={setTheme} />} /> */}
           <Route path="/home" element={<Section theme={theme} setTheme={setTheme} />} />
           <Route path="/Pictures" element={<PicturesCard theme={theme} setTheme={setTheme} />} />
@@ -60,6 +64,7 @@ function App() {
           <Route path="/chembur" element={<Chembur />} />
           <Route path="/site1jweller" element={<Site1 />} />
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
+
         </Routes>
       </Router>
       {/* <Footer  theme={theme} setTheme={setTheme}/> */}

@@ -1,0 +1,22 @@
+.leftPanel {
+    max-height: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #313A46;
+    color: white;
+}
+
+.leftPanel li {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.leftPanel li:hover {
+    font-size: 17px;
+}
+
+
+.rightPanel {
+    height: "100vh";
+    overflow-y: scroll;
+}

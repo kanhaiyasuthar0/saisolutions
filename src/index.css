@@ -74,6 +74,11 @@ code {
   /* background-image:; */
 }
 
+.inputsitename {
+  width: 350px;
+  margin-top: 20px !important;
+}
+
 
 @media only screen and (max-width: 450px) {
 

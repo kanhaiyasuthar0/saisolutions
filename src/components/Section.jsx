@@ -1,5 +1,6 @@
 import { style } from '@mui/system'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Chembur from './Chembur'
 import FirstPageCarousel from './FirstPageCarousel'
 import Footer from './Footer'
@@ -8,6 +9,7 @@ import Navbar from './Navbar'
 import PictureSlider from './PictureSlider'
 import styles from "./section.module.css"
 const Section = (props) => {
+  const navigate = useNavigate()
   return (
     <div className={styles.container1}>
       <section className={styles.one}>
@@ -16,10 +18,10 @@ const Section = (props) => {
         {/* <Chembur/> */}
         <div className={styles.headline}>Experience and book a meeting now for your dream home</div>
         <div className={styles.btngrp}>
-          <div className={styles.eachbtn}>Photos</div>
-          <div className={styles.eachbtn}>Videos</div>
-          <div className={styles.eachbtn}>Contact</div>
-          <div className={styles.eachbtn}>Get Quotation</div>
+          <div onClick={() => navigate("/Pictures")} className={styles.eachbtn}>Photos</div>
+          <div onClick={() => navigate("/Videos")} className={styles.eachbtn}>Videos</div>
+          <div onClick={() => navigate("/Pictures")} className={styles.eachbtn}>Contact</div>
+          <div onClick={() => navigate("/Pictures")} className={styles.eachbtn}>Get Quotation</div>
         </div>
       </section>
       <section className={styles.two}>
