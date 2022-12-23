@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import sai_log from "../Assets/Icons/logo_sai_light.png"
 import axios from "axios"
-import { Urls } from './urlConstant'
+import { Urls } from '../urlConstant'
 import { useNavigate } from 'react-router-dom'
 const Admin = () => {
     const navigate = useNavigate()
