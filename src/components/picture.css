@@ -1,108 +1,119 @@
-.imageLimit{
-    height: 600px;
-    width: 100%;
-    
-    
+.imageLimit {
+  height: 600px;
+  width: 100%;
+
+
 }
-.sliderht{
-    /* max-height: 92.5vh; */
-    /* margin-top: vh; */
-    /* padding: 25px 0px; */
-max-width: 100%;
+
+.sliderht {
+  /* max-height: 92.5vh; */
+  /* margin-top: vh; */
+  /* padding: 25px 0px; */
+  max-width: 100%;
 
 }
 
 .cover {
-    object-fit: cover;
-    margin: auto;
-    /* padding: 20px; */
-    max-height: 500px;
-    /* width: 50px;
+  object-fit: cover;
+  margin: auto;
+  /* padding: 20px; */
+  max-height: 500px;
+  /* width: 50px;
     
     height: 100px; */
-  }
+}
 
-  .padder{
-    padding: 10px;
-      /* background-image: url("../../src/Assets/Images/screens/desktop4.svg"); */
+.padder {
+  padding: 10px;
+  /* background-image: url("../../src/Assets/Images/screens/desktop4.svg"); */
+  /* background-repeat: no-repeat; */
+
+}
+
+.lightdiv {
+  /* padding: 10px; */
+  /* background-image: url("../../src/Assets/Images/screens/desktop4.svg"); */
+  background-repeat: no-repeat;
+  transition: all 0.4s !important;
+
+}
+
+.darkdiv {
+  /* padding: 10px; */
+  /* background-image: url("../../src/Assets/Images/screens/desktop6.svg"); */
+  background-repeat: no-repeat;
+  transition: all 0.4s !important;
+
+}
+
+.navbar {
+  color: black !important;
+}
+
+.pictureDiv {
+  /* border: 10px solid green !important; */
+  /* background-position:center; */
+  /* background-image: url("../../src/Assets/Images/screens/desktop5.svg"); */
+  background-repeat: no-repeat;
+
+}
+
+.darkDiv {
+  /* border: 10px solid green !important; */
+  /* background-position:center; */
+  /* background-image: url("../../src/Assets/Images/screens/desktop6.svg"); */
+  background-repeat: no-repeat;
+
+}
+
+.removebg {
+  background-image: none !important;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  /* color: black; */
+  /* border: 10px solid green; */
+}
+
+.removebg .normal div {
+  border: none !important;
+
+}
+
+.removebg .normal div:hover {
+  color: black !important;
+  border: 0.5px solid black !important;
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  .padder {
+    padding: 10px 10px;
+    /* background-image: url("../../src/Assets/Images/screens/mobilebig.svg"); */
     /* background-repeat: no-repeat; */
 
   }
-  .lightdiv{
-    /* padding: 10px; */
-      background-image: url("../../src/Assets/Images/screens/desktop4.svg");
+
+  .lightdiv {
+    background-image: url("../../src/Assets/Images/screens/mobilebig.svg");
     background-repeat: no-repeat;
-  transition: all 0.4s !important;
-
   }
-  
-  .darkdiv{
-    /* padding: 10px; */
-      background-image: url("../../src/Assets/Images/screens/desktop6.svg");
+
+  .darkdiv {
+    background-image: url("../../src/Assets/Images/screens/mobilebigd.svg");
     background-repeat: no-repeat;
-    transition: all 0.4s !important;
+  }
 
-  }
-  
-  .navbar{
-    color: black !important;
-  }
-  .pictureDiv{
-    /* border: 10px solid green !important; */
-    /* background-position:center; */
-    background-image: url("../../src/Assets/Images/screens/desktop5.svg");
+  .pictureDiv {
+    background-image: url("../../src/Assets/Images/screens/mobilebig.svg");
     background-repeat: no-repeat;
+  }
+
+  .cover {
+    object-fit: cover;
+    margin: auto;
+
 
   }
-  .darkDiv{
-    /* border: 10px solid green !important; */
-    /* background-position:center; */
-    background-image: url("../../src/Assets/Images/screens/desktop6.svg");
-    background-repeat: no-repeat;
-
-  }
-  .removebg{
-    background-image: none !important;
-    background-color: rgba(255, 255, 255, 0.75) !important;
-    /* color: black; */
-    /* border: 10px solid green; */
-  }
-  .removebg .normal div{
-    border: none !important;
-    
-  }
-  .removebg .normal div:hover{
-    color: black !important;
-    border: 0.5px solid black !important;
-    
-  }
-  @media only screen and (max-width: 450px) {
-      
-      .padder{
-        padding: 10px 10px;
-        /* background-image: url("../../src/Assets/Images/screens/mobilebig.svg"); */
-        /* background-repeat: no-repeat; */
-    
-      }
-
-      .lightdiv {
-         background-image: url("../../src/Assets/Images/screens/mobilebig.svg"); 
-         background-repeat: no-repeat;
-      }
-      .darkdiv {
-         background-image: url("../../src/Assets/Images/screens/mobilebigd.svg"); 
-         background-repeat: no-repeat;
-      }
-      .pictureDiv{
-        background-image: url("../../src/Assets/Images/screens/mobilebig.svg"); 
-        background-repeat: no-repeat;
-      }
-      .cover{
-        object-fit: cover;
-        margin: auto;
 
 
-      }
-
-    
 }

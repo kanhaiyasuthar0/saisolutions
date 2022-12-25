@@ -5,15 +5,19 @@ import { useState } from 'react'
 import Col from 'react-bootstrap/esm/Col'
 import Container from 'react-bootstrap/esm/Container'
 import Row from 'react-bootstrap/esm/Row'
+import Loader from '../Loader'
+import Spinner from '../Spinner'
 import { Urls } from '../urlConstant'
 
 const AdminSiteData = () => {
+    const [isLoading, setIsloading] = useState(false)
+    const [spinner, setSpinner] = useState(false)
     const [sitename, setSiteName] = useState('')
     const [sitetype, setSiteType] = useState('')
     const [sitelocation, setSiteLocation] = useState('')
     const [date, setDate] = useState('')
     const [ytlink, setLink] = useState('')
-    const [images, setImages] = useState('')
+    const [images, setImages] = useState(null)
     const [sitedesc, setDescription] = useState('')
     const [imagesLinks, setImagesLinks] = useState([])
     const handleChange = (event) => {
@@ -30,32 +34,51 @@ const AdminSiteData = () => {
         imageLinks.push(res.data.url)
     }
 
-    const submit = async (e) => {
-        e.preventDefault()
+    const syncData = async () => {
+        setSpinner(true)
         for (let i = 0; i < images.length; i++) {
             await uploadImageToCloud(images[i])
         }
         setImagesLinks([...imageLinks])
+        setSpinner(false)
+
+    }
+
+    const submit = async (e) => {
+        setIsloading(true)
+        e.preventDefault()
+        // for (let i = 0; i < images.length; i++) {
+        //     await uploadImageToCloud(images[i])
+        // }
         var data = {
             site_name: sitename,
             site_type: sitetype,
             site_location: sitelocation,
             date: date,
             yt_link: ytlink,
-            images: imageLinks,
+            images: imagesLinks,
             site_description: sitedesc
         }
         console.log(data)
         try {
             const res = await axios.post(Urls.mainUrl + '/sitedetails', data)
             console.log(res)
+            // setImagesLinks([])
+            setSiteName("")
+            setDate("")
+            setDescription("")
+            setImages(null)
+            setLink("")
+            setIsloading(false)
         } catch (error) {
             console.log(error)
+            setIsloading(false)
             alert("Please photos again")
         }
     }
     return (
         <Container style={{ marginTop: "100px" }}>
+            {isLoading ? <Loader /> : ""}
             Site details
             <Row>
                 <Col style={{ margin: "auto" }} lg={6}>
@@ -80,28 +103,33 @@ const AdminSiteData = () => {
                     <TextField onChange={(e) => setSiteLocation(e.target.value)} value={sitelocation} id="filled-basic" label="Site location" variant="filled" className='inputsitename' />
                     <TextField onChange={(e) => setDate(e.target.value)} value={date} id="filled-basic" type={'date'} variant="filled" className='inputsitename' />
                     <TextField onChange={(e) => setLink(e.target.value)} value={ytlink} id="filled-basic" type={'text'} variant="filled" label='Youtube video link' placeholder='https://' className='inputsitename' />
+                    <input
+                        className='inputsitename'
+                        id='images'
+                        type="file"
+                        onChange={(e) => {
+                            setImagesLinks([])
+                            setImages(e.target.files)
+                        }
+                        }
+                        multiple
+                    />
                     <Button
+                        onClick={syncData}
                         variant="contained"
-                        component="label"
                         style={{ marginTop: "20px", display: "block", width: "350px" }}
+                        disabled={(!images || imagesLinks.length > 0)}
                     >
-                        Upload Images
-                        <input
-                            id='images'
-                            type="file"
-                            hidden
-                            onChange={(e) => setImages(e.target.files)}
-                            multiple
-                        />
+                        {spinner ? <Spinner /> : "Upload Images"}
                     </Button>
                     <TextField onChange={(e) => setDescription(e.target.value)} value={sitedesc} id="filled-basic" type={'text'} variant="filled" label='Description' placeholder='Write something about site..' className='inputsitename' />
 
-                    <Button onClick={submit} style={{ width: "350px", marginTop: "20px" }} variant="contained">
+                    <Button disabled={imagesLinks <= 0} onClick={submit} style={{ width: "350px", marginTop: "20px" }} variant="contained">
                         Save
                     </Button>
                 </Col>
                 <Col>
-                    {imagesLinks.length > 0 ? imagesLinks.map((img) => {
+                    {imagesLinks?.length > 0 ? imagesLinks.map((img) => {
                         return <img src={img} alt='none' height={"100px"} width="100px" />
                     }) : ""}
                 </Col>

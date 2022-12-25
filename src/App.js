@@ -1,7 +1,6 @@
 import Carousel from "./components/Carousel";
 import Navbar from "./components/Navbar";
 import Video from "./components/Video";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PicturesCard from "./components/PicturesCard";
 import OnGoingSite from "./components/OnGoingSite";
