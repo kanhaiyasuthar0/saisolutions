@@ -21,6 +21,7 @@ import Admin from "./components/Admin";
 import AdminPanel from "./components/AdminPanel";
 import axios from "axios";
 import { Urls } from "./components/urlConstant";
+import Loader from "./components/Loader";
 
 function App() {
   const [theme, setTheme] = useState(false)
@@ -47,7 +48,7 @@ function App() {
       <Router>
         {/* <Navbar theme={theme} setTheme={setTheme} /> */}
         {/* <Counter/> */}
-
+        {isLoading ? <Loader /> : ""}
         <Routes>
           {/* <Route path="/home"> */}
           {/* <About /> */}

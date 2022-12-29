@@ -45,7 +45,7 @@ const PicturesCard = (props) => {
   }
 
   useEffect(() => {
-    getAllSiteData()
+    // getAllSiteData()
   }, [])
   return (
     // <div style={{ padding: "10px" }} className={`${props.theme ? 'pictureDiv' : "darkDiv"}`}>
