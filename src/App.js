@@ -65,7 +65,7 @@ function App() {
           <Route path="/adminpanel" element={<AdminPanel data={data} theme={theme} setTheme={setTheme} />} />
           {/* <Route path="/home" element={<Carousel theme={theme} setTheme={setTheme} />} /> */}
           <Route path="/home" element={<Section data={data} theme={theme} setTheme={setTheme} />} />
-          <Route path="/Pictures" element={<PicturesCard theme={theme} setTheme={setTheme} />} />
+          <Route path="/Pictures" element={<PicturesCard data={data} theme={theme} setTheme={setTheme} />} />
           <Route path="/Videos" element={<Video data={data} theme={theme} setTheme={setTheme} />} />
           <Route path="/team" element={<Team data={data} />} />
           {/* <Route path="/ghansoli2" element={<Ghansoli2 />} /> */}

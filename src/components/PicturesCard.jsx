@@ -46,6 +46,8 @@ const PicturesCard = (props) => {
 
   useEffect(() => {
     // getAllSiteData()
+    console.log("props", props.data)
+    setAllPicture([...props.data])
   }, [])
   return (
     // <div style={{ padding: "10px" }} className={`${props.theme ? 'pictureDiv' : "darkDiv"}`}>
@@ -58,7 +60,7 @@ const PicturesCard = (props) => {
       {!viewPictureSlider ? <Row>
         {
           allicture.length > 0 ? allicture.map((site, index) => {
-            if (site.images.length > 0) return (<Col key={index} lg={4} sm={12} className="">
+            return (<Col key={index} lg={4} sm={12} className="">
               <LazyLoadImage onClick={() => { toggleView(site, false) }} style={{ cursor: "pointer", height: "400px" }} src={site.images[0]} alt="..." className="card-img-top rounded" />
               <span style={{ width: "100%" }}>
                 <h5 className=""> <span style={{ fontWeight: "bold" }}>  Site name :   </span>  {site.site_name}</h5>

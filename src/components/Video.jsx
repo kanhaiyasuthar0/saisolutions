@@ -38,7 +38,8 @@ function Video(props) {
   }
 
   useEffect(() => {
-    getAllData()
+    // getAllData()
+    setData([...props.data])
   }, [])
 
 
