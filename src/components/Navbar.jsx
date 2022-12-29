@@ -18,14 +18,14 @@ function Navbar(props) {
   }, [])
 
   return (
-    <nav style={{ background: props.theme ? "none" : "none", color: props.theme ? "white" : "black", width: "100vw" }} className={`navbar sticky-top navbar-expand-lg navbar-dark ${screenY > 100 ? "removebg" : ""}`}>
+    <nav style={{ background: props.theme ? "rgba(128, 128, 128, 0.2)" : "rgba(128, 128, 128, 0.507)", color: props.theme ? "black" : "black" }} className={`navbar sticky-top navbar-expand-lg navbar-dark ${screenY > 100 ? "removebg" : ""}`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly" }}>
             <img style={{ height: "30px", width: "30px", marginRight: "10px" }} src={sai} alt="sailogo" />
             <span>
 
-              SAi solutions
+              Sai solutions
             </span>
           </div>
         </Link>

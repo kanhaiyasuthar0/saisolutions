@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Collapse, Row } from 'react-bootstrap'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useNavigate } from 'react-router-dom'
 
@@ -100,10 +100,12 @@ const PhotoViewer = ({ data, toggleView }) => {
                         </div>
                     </Row>
                     <Row onClick={() => { toggleView([], true) }}>
-                        <button className='btn-primary'>
-                            {/* <span></span> */}
-                            <span>Back</span>
-                        </button>
+                        <Col lg={6} style={{ margin: "auto", textAlign: "center" }} sm={12}>
+                            <button className='btn-primary w-100' style={{ borderRadius: "10px" }}>
+                                {/* <span></span> */}
+                                <span>Back</span>
+                            </button>
+                        </Col>
                     </Row>
                 </Col>
             </Row>

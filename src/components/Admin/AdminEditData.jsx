@@ -5,8 +5,9 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import Loader from '../Loader'
 import Spinner from '../Spinner'
 import { Urls } from '../urlConstant'
+// import CancelIcon from '@mui/icons-material/Cancel';
 
-const AdminEditData = () => {
+const AdminEditData = (props) => {
     const [data, setData] = useState([])
     const [isLoading, setLoading] = useState(false)
     const [spinner, setSpinner] = useState(false)
@@ -15,8 +16,15 @@ const AdminEditData = () => {
     const [site_selected, setSiteSelected] = useState({})
     const [siteid, setSiteId] = useState("")
     const getAllData = async () => {
-        let res = await axios.get(Urls.mainUrl + "/allsitedata")
-        setData([...res.data])
+        setLoading(true)
+        try {
+            let res = await axios.get(Urls.mainUrl + "/allsitedata")
+            setData([...res.data])
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            alert("error occured")
+        }
     }
     var imageLinks = []
     const uploadImageToCloud = async (image) => {
@@ -83,7 +91,8 @@ const AdminEditData = () => {
     console.log(site_selected)
 
     useEffect(() => {
-        getAllData()
+        // getAllData()
+        setData([...props.data])
     }, [])
     return (
         <Container>
@@ -98,9 +107,9 @@ const AdminEditData = () => {
                             value={siteid}
                             onChange={(e) => handleSelect(e.target.value)}
                         >
-                            {data?.map((site) => {
+                            {data?.map((site, index) => {
                                 console.log(site)
-                                return (<MenuItem value={site._id}>{site.site_name}</MenuItem>)
+                                return (<MenuItem key={index} value={site._id}>{site.site_name}</MenuItem>)
                             })}
                         </Select>
                     </FormControl>
@@ -122,23 +131,6 @@ const AdminEditData = () => {
                             <label for="floatingInput">Youtube link</label>
                         </div>
                     </div> : ""}
-                    <div style={{ display: "grid", gridTemplateColumns: "auto auto auto auto auto" }}>
-                        {site_selected.images?.map((img, index) => {
-                            return <div className='mx-1' style={{ textAlign: "center" }}>
-                                <button className='btn btn-danger' onClick={() => handleFilter(index)}>Delete</button>
-                                <img src={img} alt='' height={"150px"} width={"150px"} />
-                            </div>
-                        })}
-                        {imagesLinks?.map((img, index) => {
-                            return <div className='mx-1' style={{ textAlign: "center" }}>
-                                <button className='btn btn-danger' onClick={() => handleFilter(index)}>Delete</button>
-                                <img src={img} alt='' height={"150px"} width={"150px"} />
-                            </div>
-                        })}
-
-                    </div>
-                </Col>
-                <Col>
                     <input
                         className='inputsitename'
                         id='images'
@@ -157,8 +149,27 @@ const AdminEditData = () => {
                         style={{ marginTop: "20px", display: "block", width: "350px" }}
                         disabled={imagesLinks.length > 0}
                     >
-                        {spinner ? <Spinner /> : "Upload Images"}
+                        {spinner ? <Spinner /> : "Add more images"}
                     </Button>
+                </Col>
+
+                <Col sm={12} lg={6} style={{ height: "100vh", overflowY: "scroll" }}>
+                    {/* <Col lg={6} sm={12}> */}
+                    {/* <div style={{}}> */}
+                    {site_selected.images?.map((img, index) => {
+                        return <span key={index} className='mx-1'>
+                            <img src={img} alt='' height={"150px"} width={"150px"} />
+                            <button className='btn' style={{ color: "red" }} onClick={() => handleFilter(index)}>Delete</button>
+                        </span>
+                    })}
+                    {imagesLinks?.map((img, index) => {
+                        return <span key={index} className='mx-1' style={{ textAlign: "center" }}>
+                            <button className='btn btn-danger' onClick={() => handleFilter(index)}>Delete</button>
+                            <img src={img} alt='' height={"150px"} width={"150px"} />
+                        </span>
+                    })}
+                    {/* </div> */}
+                    {/* </Col> */}
                 </Col>
             </Row>
             <Row>

@@ -16,8 +16,11 @@ import axios from 'axios';
 import { Urls } from './urlConstant';
 import { Col, Row } from 'react-bootstrap';
 import PhotoViewer from './PhotoViewer';
+import Loader from './Loader';
+import Navbar from './Navbar';
 const PicturesCard = (props) => {
   const [allicture, setAllPicture] = useState([])
+  const [isLoading, setLoading] = useState(false)
   const [viewPictureSlider, setviewPictureSlider] = useState(false)
   const [viewData, setviewData] = useState([])
   const toggleView = (data, clear) => {
@@ -30,28 +33,33 @@ const PicturesCard = (props) => {
     }
   }
   const getAllSiteData = async () => {
+    setLoading(true)
     try {
       let res = await axios.get(Urls.mainUrl + "/allsitedata")
       setAllPicture([...res.data])
+      setLoading(false)
     } catch (error) {
       console.log(error)
+      setLoading(false)
     }
   }
 
   useEffect(() => {
     getAllSiteData()
-  })
+  }, [])
   return (
-    <div style={{ padding: "10px" }} className={`${props.theme ? 'pictureDiv' : "darkDiv"}`}>
-
+    // <div style={{ padding: "10px" }} className={`${props.theme ? 'pictureDiv' : "darkDiv"}`}>
+    <div style={{ padding: "0px 20px 20px 20px" }}>
+      <Navbar theme={props.theme} setTheme={props.setTheme} />
+      {isLoading ? <Loader /> : ""}
       {/* <PictureSlider /> */}
       {viewPictureSlider ? <PhotoViewer toggleView={toggleView} data={viewData} /> : ""}
 
       {!viewPictureSlider ? <Row>
         {
-          allicture.length > 0 ? allicture.map((site) => {
-            return (<Col onClick={() => { toggleView(site, false) }} lg={4} sm={12} className="">
-              <LazyLoadImage style={{ cursor: "pointer" }} src={site.images[0]} alt="..." className="card-img-top imageLimit rounded" />
+          allicture.length > 0 ? allicture.map((site, index) => {
+            if (site.images.length > 0) return (<Col key={index} lg={4} sm={12} className="">
+              <LazyLoadImage onClick={() => { toggleView(site, false) }} style={{ cursor: "pointer", height: "400px" }} src={site.images[0]} alt="..." className="card-img-top rounded" />
               <span style={{ width: "100%" }}>
                 <h5 className=""> <span style={{ fontWeight: "bold" }}>  Site name :   </span>  {site.site_name}</h5>
                 <p className=""> <span style={{ fontWeight: "bold" }}>   Description :  </span> {site.site_description}</p>
@@ -77,7 +85,7 @@ const PicturesCard = (props) => {
           </div>
 
         </Col> */}
-        <Col lg={4} sm={12} >
+        {/* <Col lg={4} sm={12} >
           <div className="card rounded px-1 rounded">
             <Link to="/ghansoli2"> <LazyLoadImage src="https://i.ibb.co/cv4mWSM/IMG-20210208-143236-1-scaled.jpg" className="card-img-top imageLimit rounded" alt="..." /></Link>
             <div className="card-body">
@@ -87,8 +95,8 @@ const PicturesCard = (props) => {
             </div>
           </div>
 
-        </Col>
-        <Col lg={4} sm={12} >
+        </Col> */}
+        {/* <Col lg={4} sm={12} >
           <div className="card px-1 rounded">
             <Link to="/ghansoli4">   <LazyLoadImage src="https://i.ibb.co/s6kFHcd/IMG-20190710-220527-1-768x1024.jpg" className="card-img-top imageLimit rounded" alt="..." /></Link>
             <div className="card-body">
@@ -98,11 +106,11 @@ const PicturesCard = (props) => {
             </div>
           </div>
 
-        </Col>
+        </Col> */}
         {/* </Row> */}
 
         {/* <Row> */}
-        <Col lg={4} sm={12}>
+        {/* <Col lg={4} sm={12}>
           <div className="card px-1 rounded">
             <Link to="/kaler"> <LazyLoadImage src={kaler} className="card-img-top imageLimit rounded" alt="..." /></Link>
             <div className="card-body">
@@ -112,8 +120,8 @@ const PicturesCard = (props) => {
             </div>
           </div>
 
-        </Col>
-        <Col lg={4} sm={12}>
+        </Col> */}
+        {/* <Col lg={4} sm={12}>
 
           <div className="card px-1">
             <Link to="/chembur">  <LazyLoadImage src={chembur} className="card-img-top imageLimit" alt="..." /></Link>
@@ -123,8 +131,8 @@ const PicturesCard = (props) => {
               <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
-        </Col>
-        <Col lg={4} sm={12}>
+        </Col> */}
+        {/* <Col lg={4} sm={12}>
 
           <div className="card px-1">
             <Link to="/kalamboli">  <LazyLoadImage src={kalamboli} className="card-img-top imageLimit" alt="..." /></Link>
@@ -134,8 +142,8 @@ const PicturesCard = (props) => {
               <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
-        </Col>
-        <Col lg={4} sm={12}>
+        </Col> */}
+        {/* <Col lg={4} sm={12}>
 
           <div className="card px-1">
             <Link to="/site1jweller">  <LazyLoadImage src={mahendra} className="card-img-top imageLimit" alt="..." /></Link>
@@ -145,7 +153,7 @@ const PicturesCard = (props) => {
               <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
-        </Col>
+        </Col> */}
       </Row> : ""}
 
       {/* <Link to= "/thane"> */}

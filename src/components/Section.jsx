@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Chembur from './Chembur'
 import FirstPageCarousel from './FirstPageCarousel'
 import Footer from './Footer'
+import GraphForTotalSite from './GraphForTotalSite'
 import Introduction from './Introduction'
 import Navbar from './Navbar'
 import PictureSlider from './PictureSlider'
@@ -17,6 +18,7 @@ const Section = (props) => {
         {/* <FirstPageCarousel theme={props.theme} setTheme={props.setTheme}/> */}
         {/* <Chembur/> */}
         <div className={styles.headline}>Experience and book a meeting now for your dream home</div>
+        {/* <GraphForTotalSite data={props.data} /> */}
         <div className={styles.btngrp}>
           <div onClick={() => navigate("/Pictures")} className={styles.eachbtn}>Photos</div>
           <div onClick={() => navigate("/Videos")} className={styles.eachbtn}>Videos</div>
@@ -25,100 +27,10 @@ const Section = (props) => {
         </div>
       </section>
       <section className={styles.two}>
-        <div className='videoEachBoxMainDiv'>
-
-          <div className={styles.videoEachBox}>
-
-            <div className="ratio ratio-16x9">
-              <iframe
-                width="560"
-                height="300"
-                src="https://www.youtube.com/embed/kQURbofO1i0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div >
-              {/* <ImageSide data={data1}/> */}
-            </div>
-          </div>
-          <div className={styles.videoEachBox}>
-
-            <div className="ratio ratio-16x9">
-              <iframe
-                width="560"
-                height="300"
-                src="https://www.youtube.com/embed/kQURbofO1i0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div >
-              {/* <ImageSide data={data1}/> */}
-            </div>
-          </div>
-
-          <div className={styles.videoEachBox}>
-
-            <div className="ratio ratio-16x9">
-              <iframe
-                width="560"
-                height="300"
-                src="https://www.youtube.com/embed/hUvQEZ8NOKo"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div >
-              {/* <ImageSide data={data1}/> */}
-            </div>
-          </div>
-          <div className={styles.videoEachBox}>
-
-            <div className="ratio ratio-16x9">
-              <iframe
-                width="560"
-                height="300"
-                src="https://www.youtube.com/embed/Qjjvg3hC1cY"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div >
-              {/* <ImageSide data={data1}/> */}
-            </div>
-          </div>
-          <div className={styles.videoEachBox}>
-
-            <div className="ratio ratio-16x9">
-              <iframe
-                width="500"
-                height="300"
-                src="https://www.youtube.com/embed/EKvKmNYF7xU"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer ; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div >
-              {/* <ImageSide data={data1}/> */}
-            </div>
-          </div>
-        </div>
+        <Introduction />
       </section>
       <section className={styles.three}>
-        <Introduction />
-        <Footer theme={props.theme} setTheme={props.setTheme} />
-
+        {/* <Footer theme={props.theme} setTheme={props.setTheme} /> */}
       </section>
     </div>
   )

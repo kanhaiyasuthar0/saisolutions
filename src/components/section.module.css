@@ -20,7 +20,7 @@ section {
     display: flex;
     flex-direction: column;
     /* width: 100vw; */
-    background-image: url(../Assets/Images/Dingrol/dingrol_cur1.jpeg);
+    /* background-image: url(../Assets/Images/Dingrol/dingrol_cur1.jpeg); */
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -53,6 +53,11 @@ section {
 .videoEachBox .video {
     /* width:100vw; */
 
+}
+
+.btngrp,
+.headline {
+    display: none;
 }
 
 @media screen and (max-width:500px) {
@@ -94,6 +99,7 @@ section {
     }
 
     .headline {
+        display: inline-block;
         font-size: 36px;
         text-align: center;
         font-weight: 700;

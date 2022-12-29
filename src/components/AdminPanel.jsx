@@ -11,7 +11,8 @@ import Loader from './Loader';
 import AdminEditData from './Admin/AdminEditData';
 import axios from 'axios';
 import { Urls } from './urlConstant';
-const AdminPanel = () => {
+import AdminDashboard from './Admin/AdminDashboard';
+const AdminPanel = (props) => {
     const navigate = useNavigate()
     const [isLoading, setIsloading] = useState(false)
     const [allstate, setAllSatate] = useState({ dashboard: true, uploadData: false, userRole: false, testimonial: false, editData: false })
@@ -29,12 +30,13 @@ const AdminPanel = () => {
 
     const checkAuth = async () => {
         let data = JSON.parse(localStorage.getItem("user_data"))
+        console.log(data)
         try {
             let res = await axios.post(Urls.mainUrl + "/checkuser", data)
             console.log(res)
 
         } catch (error) {
-            navigate("/")
+            // navigate("/")
             console.log(error)
         }
     }
@@ -57,19 +59,21 @@ const AdminPanel = () => {
                             <li onClick={() => setState('editData')}>Edit site data</li>
                             <li onClick={() => setState('userRole')}>Add user role</li>
                             <li onClick={() => setState('testimonial')}>Add testimonials</li>
+                            <br />
+                            <li style={{}} onClick={() => navigate("/")}>Live</li>
                         </ul>
                     </Row>
 
                 </Col>
                 <Col className={styles.rightPanel} lg={10}>
                     {allstate.dashboard && <Row>
-                        Dashboard
+                        <AdminDashboard data={props.data} />
                     </Row>}
                     {allstate.uploadData && <Row>
-                        <AdminSiteData />
+                        <AdminSiteData data={props.data} />
                     </Row>}
                     {allstate.editData && <Row>
-                        <AdminEditData />
+                        <AdminEditData data={props.data} />
                     </Row>}
                     {allstate.userRole && <Row>
                         userRole
@@ -77,6 +81,7 @@ const AdminPanel = () => {
                     {allstate.testimonial && <Row>
                         testimonial
                     </Row>}
+
                 </Col>
             </Row>
         </Container>

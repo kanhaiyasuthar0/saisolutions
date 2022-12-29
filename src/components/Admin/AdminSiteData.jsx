@@ -1,6 +1,7 @@
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material'
 import axios from 'axios'
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
 import Col from 'react-bootstrap/esm/Col'
 import Container from 'react-bootstrap/esm/Container'
@@ -76,6 +77,9 @@ const AdminSiteData = () => {
             alert("Please photos again")
         }
     }
+    useEffect(() => {
+
+    }, [])
     return (
         <Container style={{ marginTop: "100px" }}>
             {isLoading ? <Loader /> : ""}

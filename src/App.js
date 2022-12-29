@@ -19,16 +19,29 @@ import { useEffect, useState } from "react";
 import Section from "./components/Section";
 import Admin from "./components/Admin";
 import AdminPanel from "./components/AdminPanel";
+import axios from "axios";
+import { Urls } from "./components/urlConstant";
 
 function App() {
   const [theme, setTheme] = useState(false)
-  // window.scrollBy(100,1000)
-  // window.onscroll()
+  const [isLoading, setLoading] = useState(false)
+  const [data, setData] = useState([])
+  const getAllData = async () => {
+    setLoading(true)
+    try {
+      let res = await axios.get(Urls.mainUrl + "/allsitedata")
+      setData([...res.data])
+      setLoading(false)
+    } catch (error) {
+      setLoading(false)
+      alert("error occured")
+    }
+  }
 
-  // useEffect(()=>{
-  // console.log(window.scrollBy(100,100))
+  useEffect(() => {
+    getAllData()
+  }, [])
 
-  // },[window.screenY])
   return (
     <>
       <Router>
@@ -46,22 +59,22 @@ function App() {
           {/* {console.log("gall")} */}
           {/* </Route> */}
 
-          <Route path="/" element={<Section theme={theme} setTheme={setTheme} />} />
+          <Route path="/" element={<Section data={data} theme={theme} setTheme={setTheme} />} />
           <Route path="/admin" element={<Admin theme={theme} setTheme={setTheme} />} />
-          <Route path="/adminpanel" element={<AdminPanel theme={theme} setTheme={setTheme} />} />
+          <Route path="/adminpanel" element={<AdminPanel data={data} theme={theme} setTheme={setTheme} />} />
           {/* <Route path="/home" element={<Carousel theme={theme} setTheme={setTheme} />} /> */}
-          <Route path="/home" element={<Section theme={theme} setTheme={setTheme} />} />
+          <Route path="/home" element={<Section data={data} theme={theme} setTheme={setTheme} />} />
           <Route path="/Pictures" element={<PicturesCard theme={theme} setTheme={setTheme} />} />
-          <Route path="/Videos" element={<Video />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/ghansoli2" element={<Ghansoli2 />} />
-          <Route path="/thane" element={<ThaneSlider />} />
-          <Route path="/ghansoli4" element={<GhansoliSlider />} />
-          <Route path="/ghansoli1" element={<GhansoliSlider1 />} />
-          <Route path="/kalamboli" element={<Kalamboli />} />
-          <Route path="/kaler" element={<Kaler />} />
-          <Route path="/chembur" element={<Chembur />} />
-          <Route path="/site1jweller" element={<Site1 />} />
+          <Route path="/Videos" element={<Video data={data} theme={theme} setTheme={setTheme} />} />
+          <Route path="/team" element={<Team data={data} />} />
+          {/* <Route path="/ghansoli2" element={<Ghansoli2 />} /> */}
+          {/* <Route path="/thane" element={<ThaneSlider />} /> */}
+          {/* <Route path="/ghansoli4" element={<GhansoliSlider />} /> */}
+          {/* <Route path="/ghansoli1" element={<GhansoliSlider1 />} /> */}
+          {/* <Route path="/kalamboli" element={<Kalamboli />} /> */}
+          {/* <Route path="/kaler" element={<Kaler />} /> */}
+          {/* <Route path="/chembur" element={<Chembur />} /> */}
+          {/* <Route path="/site1jweller" element={<Site1 />} /> */}
           {/* <Route path='/ongoing' element={<OnGoingSite/>} /> */}
 
         </Routes>
